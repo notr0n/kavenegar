@@ -16,5 +16,5 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/api/sms/:phone', 'CustomerController.create')
+Route.get('/api/sms/:phone','CustomerController.create')
 Route.on('/').render('welcome')

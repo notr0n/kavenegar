@@ -8,8 +8,8 @@ console.log(code);
 var Message = "کد اپلیکیشن موتور " + code;
 
 class CustomerController {
-  async create ({ request, response}) {
-      var Customer = request.param('phone');
+  async create ({ request, response,params}) {
+      var Customer = params;
       response.send(Message)
       var api = Kavenegar.KavenegarApi({
         apikey: ApiKey
