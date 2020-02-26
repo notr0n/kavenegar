@@ -7,6 +7,7 @@ const Env = use('Env')
 const Helpers = use('Helpers')
 
 module.exports = {
+<<<<<<< HEAD
   /*
   |--------------------------------------------------------------------------
   | Default Connection
@@ -17,36 +18,11 @@ module.exports = {
   |
   */
   connection: Env.get('DB_CONNECTION', 'mysql'),
+=======
+>>>>>>> origin/v3
 
-  /*
-  |--------------------------------------------------------------------------
-  | Sqlite
-  |--------------------------------------------------------------------------
-  |
-  | Sqlite is a flat file database and can be good choice under development
-  | environment.
-  |
-  | npm i --save sqlite3
-  |
-  */
-  sqlite: {
-    client: 'sqlite3',
-    connection: {
-      filename: Helpers.databasePath(`${Env.get('DB_DATABASE', 'development')}.sqlite`)
-    },
-    useNullAsDefault: true
-  },
+  connection: Env.get('DB_CONNECTION', 'mysql'),
 
-  /*
-  |--------------------------------------------------------------------------
-  | MySQL
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MySQL database.
-  |
-  | npm i --save mysql
-  |
-  */
   mysql: {
     client: 'mysql',
     connection: {
@@ -54,6 +30,7 @@ module.exports = {
       port: Env.get('DB_PORT', ''),
       user: Env.get('DB_USER', 'root1'),
       password: Env.get('DB_PASSWORD', ''),
+<<<<<<< HEAD
       database: Env.get('DB_DATABASE', 'adonis-sms')
     }
   },
@@ -77,5 +54,10 @@ module.exports = {
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis-sms')
     }
+=======
+      database: Env.get('DB_DATABASE', 'api')
+    },
+    debug: Env.get('DB_DEBUG', false)
+>>>>>>> origin/v3
   }
 }

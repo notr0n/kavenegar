@@ -1,39 +1,28 @@
-# kavenegar.com AdonisJS API
-> GET /api/sms
+# Adonis API application
 
+This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
 
-## Install
+1. Bodyparser
+2. Authentication
+3. CORS
+4. Lucid ORM
+5. Migrations and seeds
+
+## Setup
+
+Use the adonis command to install the blueprint
 
 ```bash
-git clone https://github.com/notr0n/kavenegar.git
-npm install --save
+adonis new yardstick --api-only
 ```
 
-## Start
+or manually clone the repo and then run `npm install`.
 
-```bash
-cd kavenegar
-adonis serve --dev
-```
 
-## Development
+### Migrations
 
-### app/Controllers/Http/CustomerController.js
+Run the following command to run startup migrations.
 
-```bash
-class CustomerController {
-  async create ({ request, response}) {
-      response.send(Message)
-      var api = Kavenegar.KavenegarApi({
-        apikey: ApiKey
-      });
-
-      api.Send({
-        message: Message,
-        sender: Sender,
-        receptor: Customer
-      });
-  }
-  
-}
+```js
+adonis migration:run
 ```
